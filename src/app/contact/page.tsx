@@ -104,7 +104,7 @@ ${formData.message}
                   <h3 className="font-bold text-[#212121] mb-2 text-lg">Email</h3>
                   <a 
                     href="mailto:cleaning_dynamics@yahoo.com" 
-                    className="text-[#8BC34A] hover:text-[#00BCD4] transition-colors font-semibold text-lg"
+                    className="text-blue-600 hover:text-[#8BC34A] transition-colors font-semibold text-lg"
                   >
                     cleaning_dynamics@yahoo.com
                   </a>

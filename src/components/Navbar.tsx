@@ -2,12 +2,20 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const isActive = (path: string) => {
+    if (path === "/" && pathname === "/") return true;
+    if (path !== "/" && pathname.startsWith(path)) return true;
+    return false;
   };
 
   return (
@@ -24,11 +32,47 @@ export default function Navbar() {
       </div>
       
       {/* Desktop Menu */}
-      <div className="hidden md:flex gap-6">
-        <Link href="/" className="text-[#212121] hover:text-[#8BC34A] font-medium transition-colors">Home</Link>
-        <Link href="/about" className="text-[#212121] hover:text-[#8BC34A] font-medium transition-colors">About</Link>
-        <Link href="/team" className="text-[#212121] hover:text-[#8BC34A] font-medium transition-colors">Team</Link>
-        <Link href="/contact" className="text-[#212121] hover:text-[#8BC34A] font-medium transition-colors">Contact</Link>
+      <div className="hidden md:flex gap-4">
+        <Link 
+          href="/" 
+          className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
+            isActive("/") 
+              ? "bg-transparent text-[#8BC34A] border-2 border-[#8BC34A]" 
+              : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
+          }`}
+        >
+          Home
+        </Link>
+        <Link 
+          href="/about" 
+          className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
+            isActive("/about") 
+              ? "bg-transparent text-[#8BC34A] border-2 border-[#8BC34A]" 
+              : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
+          }`}
+        >
+          About
+        </Link>
+        <Link 
+          href="/team" 
+          className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
+            isActive("/team") 
+              ? "bg-transparent text-[#8BC34A] border-2 border-[#8BC34A]" 
+              : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
+          }`}
+        >
+          Team
+        </Link>
+        <Link 
+          href="/contact" 
+          className={`px-6 py-2 rounded-lg font-medium transition-all duration-300 ${
+            isActive("/contact") 
+              ? "bg-transparent text-[#8BC34A] border-2 border-[#8BC34A]" 
+              : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
+          }`}
+        >
+          Contact
+        </Link>
       </div>
 
       {/* Mobile Menu Button */}
@@ -44,31 +88,47 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div className={`md:hidden absolute top-full left-0 right-0 bg-white shadow-lg transition-all duration-300 ${isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
-        <div className="flex flex-col py-4">
+        <div className="flex flex-col py-4 px-4">
           <Link 
             href="/" 
-            className="px-6 py-3 text-[#212121] hover:text-[#8BC34A] hover:bg-gray-50 font-medium transition-colors"
+            className={`mx-4 mb-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 text-center ${
+              isActive("/") 
+                ? "bg-transparent text-[#8BC34A] border-2 border-[#8BC34A]" 
+                : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
+            }`}
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </Link>
           <Link 
             href="/about" 
-            className="px-6 py-3 text-[#212121] hover:text-[#8BC34A] hover:bg-gray-50 font-medium transition-colors"
+            className={`mx-4 mb-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 text-center ${
+              isActive("/about") 
+                ? "bg-transparent text-[#8BC34A] border-2 border-[#8BC34A]" 
+                : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
+            }`}
             onClick={() => setIsMenuOpen(false)}
           >
             About
           </Link>
           <Link 
             href="/team" 
-            className="px-6 py-3 text-[#212121] hover:text-[#8BC34A] hover:bg-gray-50 font-medium transition-colors"
+            className={`mx-4 mb-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 text-center ${
+              isActive("/team") 
+                ? "bg-transparent text-[#8BC34A] border-2 border-[#8BC34A]" 
+                : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
+            }`}
             onClick={() => setIsMenuOpen(false)}
           >
             Team
           </Link>
           <Link 
             href="/contact" 
-            className="px-6 py-3 text-[#212121] hover:text-[#8BC34A] hover:bg-gray-50 font-medium transition-colors"
+            className={`mx-4 mb-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 text-center ${
+              isActive("/contact") 
+                ? "bg-transparent text-[#8BC34A] border-2 border-[#8BC34A]" 
+                : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
+            }`}
             onClick={() => setIsMenuOpen(false)}
           >
             Contact
