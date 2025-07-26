@@ -4,7 +4,7 @@ import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
 function getMarkdownContent(slug: string) {
-  const filePath = path.join(process.cwd(), "..", "Content Pages", `${slug}.md`);
+  const filePath = path.join(process.cwd(), "src", "data", `${slug}.md`);
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { content } = matter(fileContent);
   return content;
