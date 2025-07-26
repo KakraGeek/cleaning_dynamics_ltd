@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import Image from "next/image";
 
 function getMarkdownContent(slug: string) {
   const filePath = path.join(process.cwd(), "..", "Content Pages", `${slug}.md`);
