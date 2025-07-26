@@ -4,27 +4,39 @@ export default function HomePage() {
   const services = [
     {
       title: "Domestic & Industrial Cleaning",
-      description: "Tailored cleaning services for homes, offices, warehouses, schools, and industrial sites. Includes scheduled janitorial support, deep cleaning, carpet care, upholstery, floor polishing, and more."
+      description: "Tailored cleaning services for homes, offices, warehouses, schools, and industrial sites. Includes scheduled janitorial support, deep cleaning, carpet care, upholstery, floor polishing, and more.",
+      image: "/Images/sec1.jpg",
+      icon: "🏠"
     },
     {
       title: "Post-Construction Cleaning",
-      description: "Specialized services to remove construction debris, dust, paint, and stains from newly built or renovated properties—ensuring they're move-in ready."
+      description: "Specialized services to remove construction debris, dust, paint, and stains from newly built or renovated properties—ensuring they're move-in ready.",
+      image: "/Images/sec2.png",
+      icon: "🏗️"
     },
     {
       title: "Fumigation & Pest Control",
-      description: "Safe, Ghana Standards Board–approved solutions for controlling rodents, termites, cockroaches, mosquitoes, and other pests. Includes preventive maintenance contracts for homes and businesses."
+      description: "Safe, Ghana Standards Board–approved solutions for controlling rodents, termites, cockroaches, mosquitoes, and other pests. Includes preventive maintenance contracts for homes and businesses.",
+      image: "/Images/sec3.jpg",
+      icon: "🦟"
     },
     {
       title: "Estate Management",
-      description: "Full-service management of residential and commercial properties. Includes cleaning, security coordination, landscaping, waste removal, and minor maintenance."
+      description: "Full-service management of residential and commercial properties. Includes cleaning, security coordination, landscaping, waste removal, and minor maintenance.",
+      image: "/Images/sec4.jpg",
+      icon: "🏢"
     },
     {
       title: "Solid & Liquid Waste Management",
-      description: "Environmentally responsible collection and disposal services for residential, commercial, and industrial clients. We handle septic tank evacuation, garbage collection, and recycling support."
+      description: "Environmentally responsible collection and disposal services for residential, commercial, and industrial clients. We handle septic tank evacuation, garbage collection, and recycling support.",
+      image: "/Images/sec5.jpg",
+      icon: "♻️"
     },
     {
       title: "Landscape Design & Maintenance",
-      description: "From turf installation to garden design, our team creates and maintains beautiful, eco-friendly outdoor spaces for homes, institutions, and estates."
+      description: "From turf installation to garden design, our team creates and maintains beautiful, eco-friendly outdoor spaces for homes, institutions, and estates.",
+      image: "/Images/sec6.jpeg",
+      icon: "🌿"
     }
   ];
 
@@ -59,245 +71,85 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-8 lg:py-16 px-4">
+      <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl lg:text-3xl font-bold text-[#212121] text-center mb-8 lg:mb-12">Key Services</h2>
+          <h2 className="text-3xl font-bold text-[#212121] text-center mb-12">Our Premium Services</h2>
           
-          {/* Services with Central Image Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 items-center max-w-7xl mx-auto py-8 lg:py-16">
-            {/* Mobile Layout - Sequential Cards */}
-            <div className="lg:hidden space-y-6">
-              {/* Cards 1, 2, 3 above image */}
-              <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A]">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl font-bold">1</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[0].title}</h3>
-                    <p className="text-[#212121] text-sm leading-relaxed">{services[0].description}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A]">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl font-bold">2</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[1].title}</h3>
-                    <p className="text-[#212121] text-sm leading-relaxed">{services[1].description}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A]">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl font-bold">3</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[2].title}</h3>
-                    <p className="text-[#212121] text-sm leading-relaxed">{services[2].description}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-                          {/* Central Image - Mobile */}
-              <div className="lg:hidden flex justify-center">
-                <div className="w-64 h-64 rounded-full overflow-hidden shadow-2xl">
+          {/* Enhanced Service Cards Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
+                {/* Service Image */}
+                <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/Images/circular.jpg"
-                    alt="Cleaning Dynamics team at work"
-                    width={256}
-                    height={256}
-                    className="w-full h-full object-cover"
+                    src={service.image}
+                    alt={service.title}
+                    width={400}
+                    height={300}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
-                </div>
-              </div>
-
-            {/* Cards 4, 5, 6 below image - Mobile */}
-            <div className="lg:hidden space-y-6">
-              <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A]">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl font-bold">4</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[3].title}</h3>
-                    <p className="text-[#212121] text-sm leading-relaxed">{services[3].description}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A]">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl font-bold">5</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[4].title}</h3>
-                    <p className="text-[#212121] text-sm leading-relaxed">{services[4].description}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A]">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl font-bold">6</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[5].title}</h3>
-                    <p className="text-[#212121] text-sm leading-relaxed">{services[5].description}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Desktop Layout - Left Side - Services 6 & 5 (stacked) */}
-            <div className="hidden lg:block space-y-6">
-              <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A] relative overflow-hidden">
-                <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-lg"></div>
-                <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl font-bold">6</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[5].title}</h3>
-                    <p className="text-[#212121] text-sm leading-relaxed">{services[5].description}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A] relative overflow-hidden">
-                <div className="absolute -right-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-lg"></div>
-                <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl font-bold">5</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[4].title}</h3>
-                    <p className="text-[#212121] text-sm leading-relaxed">{services[4].description}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Desktop Layout - Central Column - Image and Top/Bottom Cards */}
-            <div className="hidden lg:flex flex-col items-center space-y-16">
-              {/* Top Card - Service 1 */}
-              <div className="w-80">
-                <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A] relative overflow-hidden">
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-lg"></div>
-                  <div className="flex items-start gap-4 relative z-10">
-                    <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white text-xl font-bold">1</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[0].title}</h3>
-                      <p className="text-[#212121] text-sm leading-relaxed">{services[0].description}</p>
+                  {/* Overlay with icon */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
+                    <div className="p-4">
+                      <span className="text-3xl">{service.icon}</span>
                     </div>
                   </div>
                 </div>
-              </div>
-              
-              {/* Central Circular Image */}
-              <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl">
-                <Image
-                  src="/Images/circular.jpg"
-                  alt="Cleaning Dynamics team at work"
-                  width={384}
-                  height={384}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Bottom Card - Service 4 */}
-              <div className="w-80">
-                <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A] relative overflow-hidden">
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-lg"></div>
-                  <div className="flex items-start gap-4 relative z-10">
-                    <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white text-xl font-bold">4</span>
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[3].title}</h3>
-                      <p className="text-[#212121] text-sm leading-relaxed">{services[3].description}</p>
-                    </div>
-                  </div>
+                
+                {/* Service Content */}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-[#8BC34A] mb-3 group-hover:text-[#00BCD4] transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-[#212121] leading-relaxed text-sm">
+                    {service.description}
+                  </p>
                 </div>
-              </div>
-            </div>
-            
-            {/* Desktop Layout - Right Side - Services 2 & 3 (stacked) */}
-            <div className="hidden lg:block space-y-6">
-              <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A] relative overflow-hidden">
-                <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-lg"></div>
-                <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl font-bold">2</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[1].title}</h3>
-                    <p className="text-[#212121] text-sm leading-relaxed">{services[1].description}</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-8 border-l-[#8BC34A] relative overflow-hidden">
-                <div className="absolute -left-8 top-1/2 transform -translate-y-1/2 w-16 h-16 bg-white rounded-full shadow-lg"></div>
-                <div className="flex items-start gap-4 relative z-10">
-                  <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xl font-bold">3</span>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-[#212121] mb-2 uppercase tracking-wide">{services[2].title}</h3>
-                    <p className="text-[#212121] text-sm leading-relaxed">{services[2].description}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us Section */}
-      <section className="bg-[#F5F5F5] py-8 lg:py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold text-[#212121] mb-6 lg:mb-8">Why Choose Us?</h2>
-          <div className="grid grid-cols-1 gap-4 lg:gap-6">
-            {whyChooseUs.map((reason, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-3 w-full max-w-xl mx-auto text-left"
-              >
-                <span className="text-2xl min-w-[2em] flex justify-center">✅</span>
-                <p className="text-lg text-[#212121]">{reason}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-8 lg:py-16 px-4 bg-white">
+      {/* Why Choose Us Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-[#212121] text-center mb-12">Why Choose Cleaning Dynamics?</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {whyChooseUs.map((reason, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border-l-4 border-l-[#8BC34A]">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-white text-lg font-bold">✓</span>
+                  </div>
+                  <p className="text-[#212121] font-medium">{reason}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-16 px-4 bg-gradient-to-r from-[#8BC34A] to-[#00BCD4] text-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl lg:text-3xl font-bold text-[#212121] mb-6 lg:mb-8">Get in Touch</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-[#8BC34A] mb-2">Call or WhatsApp</h3>
-              <p className="text-lg text-[#212121]">0244369985</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-[#8BC34A] mb-2">Email</h3>
-              <a 
-                href="mailto:cleaning_dynamics@yahoo.com" 
-                className="text-lg text-blue-600 hover:text-[#8BC34A] transition-colors underline"
-              >
-                cleaning_dynamics@yahoo.com
-              </a>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-[#8BC34A] mb-2">Service Coverage</h3>
-              <p className="text-lg text-[#212121]">Nationwide</p>
-            </div>
+          <h2 className="text-3xl font-bold mb-4">Ready to Experience Premium Cleaning Services?</h2>
+          <p className="text-lg mb-8">
+            Get in touch with us today for a free consultation and quote.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="/contact" 
+              className="bg-white text-[#8BC34A] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            >
+              Get Free Quote
+            </a>
+            <a 
+              href="tel:+233244369985" 
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#8BC34A] transition-colors"
+            >
+              Call Now: 0244369985
+            </a>
           </div>
         </div>
       </section>

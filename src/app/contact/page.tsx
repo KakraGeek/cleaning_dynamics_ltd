@@ -65,228 +65,264 @@ ${formData.message}
   };
 
   return (
-    <main className="min-h-screen bg-white py-16 px-4">
+    <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-16 px-4">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-[#212121] text-center mb-12">Contact Us</h1>
+        {/* Enhanced Header */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-[#212121] mb-4">Get in Touch</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Ready to experience premium cleaning services? Contact us today for a free consultation and quote.
+          </p>
+        </div>
         
-        {/* Contact Information */}
+        {/* Contact Information and Form Grid */}
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
-          {/* Contact Details */}
-          <div className="bg-white rounded-xl shadow-lg p-8 border-l-8 border-l-[#8BC34A]">
-            <h2 className="text-2xl font-bold text-[#8BC34A] mb-6">Get in Touch</h2>
+          {/* Enhanced Contact Details */}
+          <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+            <div className="bg-gradient-to-r from-[#8BC34A] to-[#00BCD4] p-8 text-white">
+              <h2 className="text-3xl font-bold mb-2">Contact Information</h2>
+              <p className="text-lg opacity-90">We&apos;re here to help with all your cleaning needs</p>
+            </div>
             
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xl">📞</span>
+            <div className="p-8 space-y-8">
+              <div className="flex items-start gap-4 group">
+                <div className="w-14 h-14 bg-gradient-to-r from-[#8BC34A] to-[#00BCD4] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <span className="text-white text-2xl">📞</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#212121] mb-1">Call or WhatsApp</h3>
-                  <p className="text-[#212121]">0244369985</p>
-                  <p className="text-[#212121] text-sm mt-1">Alternate: 0277003030</p>
+                  <h3 className="font-bold text-[#212121] mb-2 text-lg">Call or WhatsApp</h3>
+                  <p className="text-[#212121] text-lg font-semibold">0244369985</p>
+                  <p className="text-gray-600 text-sm mt-1">Alternate: 0277003030</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xl">✉️</span>
+              <div className="flex items-start gap-4 group">
+                <div className="w-14 h-14 bg-gradient-to-r from-[#8BC34A] to-[#00BCD4] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <span className="text-white text-2xl">✉️</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#212121] mb-1">Email</h3>
-                                                <a 
-                                href="mailto:cleaning_dynamics@yahoo.com" 
-                                className="text-blue-600 hover:text-[#8BC34A] transition-colors underline"
-                              >
-                                cleaning_dynamics@yahoo.com
-                              </a>
+                  <h3 className="font-bold text-[#212121] mb-2 text-lg">Email</h3>
+                  <a 
+                    href="mailto:cleaning_dynamics@yahoo.com" 
+                    className="text-[#8BC34A] hover:text-[#00BCD4] transition-colors font-semibold text-lg"
+                  >
+                    cleaning_dynamics@yahoo.com
+                  </a>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xl">🏢</span>
+              <div className="flex items-start gap-4 group">
+                <div className="w-14 h-14 bg-gradient-to-r from-[#8BC34A] to-[#00BCD4] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <span className="text-white text-2xl">🏢</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#212121] mb-1">Office Address</h3>
-                  <p className="text-[#212121]">A5 GNATVILLE Close, Lakeside Ashaley Botwe, Accra</p>
-                  <p className="text-[#212121] text-sm mt-1">GPS: GD-091-4169</p>
+                  <h3 className="font-bold text-[#212121] mb-2 text-lg">Office Address</h3>
+                  <p className="text-[#212121] font-semibold">A5 GNATVILLE Close, Lakeside Ashaley Botwe, Accra</p>
+                  <p className="text-gray-600 text-sm mt-1">GPS: GD-091-4169</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xl">🕒</span>
+              <div className="flex items-start gap-4 group">
+                <div className="w-14 h-14 bg-gradient-to-r from-[#8BC34A] to-[#00BCD4] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <span className="text-white text-2xl">🕒</span>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-[#212121] mb-1">Operating Hours</h3>
-                  <p className="text-[#212121]">Monday to Saturday: 7:00 AM – 5:00 PM</p>
+                  <h3 className="font-bold text-[#212121] mb-2 text-lg">Operating Hours</h3>
+                  <p className="text-[#212121] font-semibold">Monday to Saturday: 7:00 AM – 5:00 PM</p>
                 </div>
               </div>
               
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-[#8BC34A] rounded-full flex items-center justify-center flex-shrink-0">
-                  <span className="text-white text-xl">🌍</span>
+              <div className="flex items-start gap-4 group">
+                <div className="w-14 h-14 bg-gradient-to-r from-[#8BC34A] to-[#00BCD4] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <span className="text-white text-2xl">🌍</span>
                 </div>
-                                            <div>
-                              <h3 className="font-semibold text-[#212121] mb-1">Service Coverage</h3>
-                              <p className="text-[#212121]">Nationwide</p>
-                              <p className="text-[#212121] text-sm mt-1">Dedicated and mobile service team</p>
-                            </div>
+                <div>
+                  <h3 className="font-bold text-[#212121] mb-2 text-lg">Service Coverage</h3>
+                  <p className="text-[#212121] font-semibold">Nationwide</p>
+                  <p className="text-gray-600 text-sm mt-1">Dedicated and mobile service team</p>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-white rounded-xl shadow-lg p-8 border-l-8 border-l-[#8BC34A]">
-            <h2 className="text-2xl font-bold text-[#8BC34A] mb-6">Send us a Message</h2>
+          {/* Enhanced Contact Form */}
+          <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+            <div className="bg-gradient-to-r from-[#00BCD4] to-[#8BC34A] p-8 text-white">
+              <h2 className="text-3xl font-bold mb-2">Send us a Message</h2>
+              <p className="text-lg opacity-90">We&apos;ll get back to you within 24 hours</p>
+            </div>
             
-            {submitSuccess && (
-              <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
-                Thank you for your message! We&apos;ll get back to you soon.
-              </div>
-            )}
-            
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-[#212121] mb-2">
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8BC34A] focus:border-transparent"
-                />
-              </div>
+            <div className="p-8">
+              {submitSuccess && (
+                <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-xl flex items-center gap-3">
+                  <span className="text-2xl">✅</span>
+                  <div>
+                    <p className="font-semibold">Message Sent Successfully!</p>
+                    <p className="text-sm">We&apos;ll get back to you soon.</p>
+                  </div>
+                </div>
+              )}
               
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-[#212121] mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8BC34A] focus:border-transparent"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-[#212121] mb-2">
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8BC34A] focus:border-transparent"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="serviceType" className="block text-sm font-medium text-[#212121] mb-2">
-                  Service Type
-                </label>
-                <select
-                  id="serviceType"
-                  name="serviceType"
-                  value={formData.serviceType}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8BC34A] focus:border-transparent bg-white text-[#212121]"
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-bold text-[#212121] mb-3">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#8BC34A] focus:border-[#8BC34A] transition-all duration-300 text-lg"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-bold text-[#212121] mb-3">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#8BC34A] focus:border-[#8BC34A] transition-all duration-300 text-lg"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-bold text-[#212121] mb-3">
+                    Phone Number *
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#8BC34A] focus:border-[#8BC34A] transition-all duration-300 text-lg"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="serviceType" className="block text-sm font-bold text-[#212121] mb-3">
+                    Service Type
+                  </label>
+                  <select
+                    id="serviceType"
+                    name="serviceType"
+                    value={formData.serviceType}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#8BC34A] focus:border-[#8BC34A] transition-all duration-300 text-lg bg-white text-[#212121]"
+                  >
+                    <option value="" className="text-[#212121]">Select a service</option>
+                    <option value="domestic-cleaning" className="text-[#212121]">Domestic & Industrial Cleaning</option>
+                    <option value="post-construction" className="text-[#212121]">Post-Construction Cleaning</option>
+                    <option value="pest-control" className="text-[#212121]">Fumigation & Pest Control</option>
+                    <option value="estate-management" className="text-[#212121]">Estate Management</option>
+                    <option value="waste-management" className="text-[#212121]">Solid & Liquid Waste Management</option>
+                    <option value="landscaping" className="text-[#212121]">Landscape Design & Maintenance</option>
+                    <option value="other" className="text-[#212121]">Other</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="contactMethod" className="block text-sm font-bold text-[#212121] mb-3">
+                    Preferred Contact Method
+                  </label>
+                  <select
+                    id="contactMethod"
+                    name="contactMethod"
+                    value={formData.contactMethod}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#8BC34A] focus:border-[#8BC34A] transition-all duration-300 text-lg bg-white text-[#212121]"
+                  >
+                    <option value="" className="text-[#212121]">Select preferred method</option>
+                    <option value="call" className="text-[#212121]">Call</option>
+                    <option value="whatsapp" className="text-[#212121]">WhatsApp</option>
+                    <option value="email" className="text-[#212121]">Email</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-bold text-[#212121] mb-3">
+                    Message or Request Details *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={4}
+                    className="w-full px-4 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-[#8BC34A] focus:border-[#8BC34A] transition-all duration-300 text-lg resize-none"
+                    placeholder="Please describe your cleaning needs or any questions you have..."
+                  />
+                </div>
+                
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-[#8BC34A] to-[#00BCD4] text-white py-4 px-8 rounded-xl font-bold text-lg hover:from-[#7CB342] hover:to-[#00ACC1] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 shadow-lg"
                 >
-                  <option value="" className="text-[#212121]">Select a service</option>
-                  <option value="domestic-cleaning" className="text-[#212121]">Domestic & Industrial Cleaning</option>
-                  <option value="post-construction" className="text-[#212121]">Post-Construction Cleaning</option>
-                  <option value="pest-control" className="text-[#212121]">Fumigation & Pest Control</option>
-                  <option value="estate-management" className="text-[#212121]">Estate Management</option>
-                  <option value="waste-management" className="text-[#212121]">Solid & Liquid Waste Management</option>
-                  <option value="landscaping" className="text-[#212121]">Landscape Design & Maintenance</option>
-                  <option value="other" className="text-[#212121]">Other</option>
-                </select>
-              </div>
-              
-              <div>
-                <label htmlFor="contactMethod" className="block text-sm font-medium text-[#212121] mb-2">
-                  Preferred Contact Method
-                </label>
-                <select
-                  id="contactMethod"
-                  name="contactMethod"
-                  value={formData.contactMethod}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8BC34A] focus:border-transparent bg-white text-[#212121]"
-                >
-                  <option value="" className="text-[#212121]">Select preferred method</option>
-                  <option value="call" className="text-[#212121]">Call</option>
-                  <option value="whatsapp" className="text-[#212121]">WhatsApp</option>
-                  <option value="email" className="text-[#212121]">Email</option>
-                </select>
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-[#212121] mb-2">
-                  Message or Request Details *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  required
-                  rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#8BC34A] focus:border-transparent resize-none"
-                  placeholder="Please describe your cleaning needs or any questions you have..."
-                />
-              </div>
-              
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-[#8BC34A] text-white py-3 px-6 rounded-lg font-semibold hover:bg-[#7CB342] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {isSubmitting ? "Sending..." : "Send Message"}
-              </button>
-            </form>
+                  {isSubmitting ? (
+                    <span className="flex items-center justify-center gap-2">
+                      <span className="animate-spin">⏳</span>
+                      Sending Message...
+                    </span>
+                  ) : (
+                    <span className="flex items-center justify-center gap-2">
+                      📤 Send Message
+                    </span>
+                  )}
+                </button>
+              </form>
+            </div>
           </div>
         </div>
 
-        {/* Google Maps */}
-        <div className="bg-white rounded-xl shadow-lg p-8 border-l-8 border-l-[#8BC34A]">
-          <h2 className="text-2xl font-bold text-[#8BC34A] mb-6">Our Location</h2>
-          <div className="w-full h-96 rounded-lg overflow-hidden">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31762.234672813942!2d-0.16321722212594492!3d5.672695591368432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sA5%20GNATVILLE%20Close%2C%20Lakeside%20Ashaley%20Botwe%2C%20Accra!5e0!3m2!1sen!2sus!4v1753542834878!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Cleaning Dynamics Ltd Location"
-              aria-label="Google Maps showing Cleaning Dynamics Ltd location"
-            />
+        {/* Enhanced Google Maps Section */}
+        <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">
+          <div className="bg-gradient-to-r from-[#8BC34A] to-[#00BCD4] p-8 text-white">
+            <h2 className="text-3xl font-bold mb-2">Our Location</h2>
+            <p className="text-lg opacity-90">Visit us at our office in Accra</p>
           </div>
-          <div className="mt-4 text-center">
-            <p className="text-sm text-gray-600 mb-2">A5 GNATVILLE Close, Lakeside Ashaley Botwe, Accra</p>
-            <p className="text-sm text-gray-600 mb-4">GPS: GD-091-4169</p>
-            <a 
-              href="https://maps.app.goo.gl/PGrhyoQHjiLzj1M7A?g_st=aw" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[#8BC34A] hover:text-[#7CB342] font-medium"
-            >
-              <span>📍</span>
-              Open in Google Maps
-            </a>
+          
+          <div className="p-8">
+            <div className="w-full h-96 rounded-xl overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d31762.234672813942!2d-0.16321722212594492!3d5.672695591368432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sA5%20GNATVILLE%20Close%2C%20Lakeside%20Ashaley%20Botwe%2C%20Accra!5e0!3m2!1sen!2sus!4v1753542834878!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Cleaning Dynamics Ltd Location"
+                aria-label="Google Maps showing Cleaning Dynamics Ltd location"
+              />
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-lg font-semibold text-[#212121] mb-2">A5 GNATVILLE Close, Lakeside Ashaley Botwe, Accra</p>
+              <p className="text-gray-600 mb-4">GPS: GD-091-4169</p>
+              <a 
+                href="https://maps.app.goo.gl/PGrhyoQHjiLzj1M7A?g_st=aw" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 text-[#8BC34A] hover:text-[#00BCD4] font-bold text-lg transition-colors"
+              >
+                <span className="text-2xl">📍</span>
+                Open in Google Maps
+              </a>
+            </div>
           </div>
         </div>
       </div>
