@@ -100,11 +100,11 @@ ${formData.message}
                 <div className="w-14 h-14 bg-gradient-to-r from-[#8BC34A] to-[#00BCD4] rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <span className="text-white text-2xl">✉️</span>
                 </div>
-                <div className="flex-1 min-w-0">
+                <div className="flex-1 min-w-0 pr-2">
                   <h3 className="font-bold text-[#212121] mb-2 text-lg">Email</h3>
                   <a 
                     href="mailto:cleaning_dynamics@yahoo.com" 
-                    className="text-blue-600 hover:text-[#8BC34A] transition-colors font-semibold text-base sm:text-lg break-all block"
+                    className="text-blue-600 hover:text-[#8BC34A] transition-colors font-semibold text-sm sm:text-base break-words block leading-tight"
                   >
                     cleaning_dynamics@yahoo.com
                   </a>
