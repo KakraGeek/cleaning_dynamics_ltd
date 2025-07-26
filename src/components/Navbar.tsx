@@ -16,8 +16,8 @@ export default function Navbar() {
                         <Image
                   src="/Images/clean_dyn_logo2.jpg"
                   alt="Cleaning Dynamics Ltd Logo"
-                  width={40}
-                  height={40}
+                  width={120}
+                  height={120}
                   className="rounded-md"
                 />
         <span className="text-[#013A20] text-lg md:text-2xl font-bold tracking-wide">Cleaning Dynamics Ltd</span>
