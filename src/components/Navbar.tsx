@@ -28,7 +28,7 @@ export default function Navbar() {
                   height={120}
                   className="rounded-md"
                 />
-        <span className="text-[#013A20] text-lg md:text-2xl font-bold tracking-wide">Cleaning Dynamics Ltd</span>
+        <span className="text-[#013A20] text-sm sm:text-base md:text-2xl font-bold tracking-wide whitespace-nowrap">Cleaning Dynamics Ltd</span>
       </div>
       
       {/* Desktop Menu */}
@@ -51,7 +51,7 @@ export default function Navbar() {
               : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
           }`}
         >
-          About
+          About Us
         </Link>
         <Link 
           href="/team" 
@@ -61,7 +61,7 @@ export default function Navbar() {
               : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
           }`}
         >
-          Team
+          Our Team
         </Link>
         <Link 
           href="/contact" 
@@ -71,7 +71,7 @@ export default function Navbar() {
               : "bg-[#8BC34A] text-white hover:bg-transparent hover:text-[#8BC34A] hover:border-2 hover:border-[#8BC34A]"
           }`}
         >
-          Contact
+          Contact Us
         </Link>
       </div>
 
@@ -109,7 +109,7 @@ export default function Navbar() {
             }`}
             onClick={() => setIsMenuOpen(false)}
           >
-            About
+            About Us
           </Link>
           <Link 
             href="/team" 
@@ -120,7 +120,7 @@ export default function Navbar() {
             }`}
             onClick={() => setIsMenuOpen(false)}
           >
-            Team
+            Our Team
           </Link>
           <Link 
             href="/contact" 
@@ -131,7 +131,7 @@ export default function Navbar() {
             }`}
             onClick={() => setIsMenuOpen(false)}
           >
-            Contact
+            Contact Us
           </Link>
         </div>
       </div>

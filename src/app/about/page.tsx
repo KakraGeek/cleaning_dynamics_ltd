@@ -52,7 +52,7 @@ export default function AboutPage() {
               
               {/* Card Content */}
               <div className="p-8">
-                <div className="prose prose-lg leading-relaxed max-w-none text-[#212121] prose-h2:text-[#8BC34A] prose-h2:text-2xl prose-h2:font-bold prose-h3:text-[#8BC34A] prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-3 prose-p:text-[#212121] prose-p:leading-relaxed prose-strong:text-[#8BC34A] prose-ul:text-[#212121] prose-li:text-[#212121] prose-li:my-2">
+                <div className="prose prose-lg leading-relaxed max-w-none text-[#212121] prose-h2:text-[#8BC34A] prose-h2:text-2xl prose-h2:font-bold prose-h3:text-[#8BC34A] prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-3 prose-h3:border-b prose-h3:border-[#8BC34A] prose-h3:pb-2 prose-p:text-[#212121] prose-p:leading-relaxed prose-strong:text-[#8BC34A] prose-ul:text-[#212121] prose-li:text-[#212121] prose-li:my-2 [&>h3]:text-[#8BC34A] [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:mt-6 [&>h3]:mb-3 [&>h3]:border-b [&>h3]:border-[#8BC34A] [&>h3]:pb-2">
                   <MDXRemote source={section.content} />
                 </div>
               </div>
@@ -76,7 +76,7 @@ export default function AboutPage() {
           
           {/* Card Content */}
           <div className="p-8">
-            <div className="prose prose-lg leading-relaxed max-w-none text-[#212121] prose-h2:text-[#8BC34A] prose-h2:text-2xl prose-h2:font-bold prose-h3:text-[#8BC34A] prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-3 prose-p:text-[#212121] prose-p:leading-relaxed prose-strong:text-[#8BC34A] prose-ul:text-[#212121] prose-li:text-[#212121] prose-li:my-2">
+            <div className="prose prose-lg leading-relaxed max-w-none text-[#212121] prose-h2:text-[#8BC34A] prose-h2:text-2xl prose-h2:font-bold prose-h3:text-[#8BC34A] prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-3 prose-h3:border-b prose-h3:border-[#8BC34A] prose-h3:pb-2 prose-p:text-[#212121] prose-p:leading-relaxed prose-strong:text-[#8BC34A] prose-ul:text-[#212121] prose-li:text-[#212121] prose-li:my-2 [&>h3]:text-[#8BC34A] [&>h3]:text-xl [&>h3]:font-semibold [&>h3]:mt-6 [&>h3]:mb-3 [&>h3]:border-b [&>h3]:border-[#8BC34A] [&>h3]:pb-2">
               <MDXRemote source={sections[2].content} />
             </div>
           </div>
