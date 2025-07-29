@@ -17,13 +17,13 @@ export default function HomePage() {
     {
       title: "Fumigation & Pest Control",
       description: "Safe, Ghana Standards Board–approved solutions for controlling rodents, termites, cockroaches, mosquitoes, and other pests. Includes preventive maintenance contracts for homes and businesses.",
-      image: "/Images/Fumigation and Pest Control_NEW.png",
+      image: "/Images/Fumigation and Pest Control_NEW1.png",
       icon: "🦟"
     },
     {
       title: "Facilities Management",
       description: "Full-service management of residential and commercial properties. Includes cleaning, security coordination, landscaping, waste removal, and minor maintenance.",
-      image: "/Images/Facilities Management-NEW1.png",
+      image: "/Images/Facilities Management-NEW2.png",
       icon: "🏢"
     },
     {
@@ -88,11 +88,9 @@ export default function HomePage() {
                     height={300}
                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                   />
-                  {/* Overlay with icon */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent flex items-end">
-                    <div className="p-4">
-                      <span className="text-3xl">{service.icon}</span>
-                    </div>
+                  {/* Icon overlay */}
+                  <div className="absolute bottom-0 right-0 p-4">
+                    <span className="text-3xl">{service.icon}</span>
                   </div>
                 </div>
                 
