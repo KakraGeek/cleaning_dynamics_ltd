@@ -5,37 +5,37 @@ export default function HomePage() {
     {
       title: "Domestic & Industrial Cleaning",
       description: "Tailored cleaning services for homes, offices, warehouses, schools, and industrial sites. Includes scheduled janitorial support, deep cleaning, carpet care, upholstery, floor polishing, and more.",
-      image: "/Images/domestic-industrial-cleaning.png",
+      image: "/Images/Domestic and Industrial Cleaning_NEW.png",
       icon: "🏠"
     },
     {
       title: "Post-Construction Cleaning",
       description: "Specialized services to remove construction debris, dust, paint, and stains from newly built or renovated properties—ensuring they're move-in ready.",
-      image: "/Images/post-construction-cleaning.png",
+      image: "/Images/post-construction cleaning_NEW.png",
       icon: "🏗️"
     },
     {
       title: "Fumigation & Pest Control",
       description: "Safe, Ghana Standards Board–approved solutions for controlling rodents, termites, cockroaches, mosquitoes, and other pests. Includes preventive maintenance contracts for homes and businesses.",
-      image: "/Images/fumigation-pest-control.png",
+      image: "/Images/Fumigation and Pest Control_NEW.png",
       icon: "🦟"
     },
     {
       title: "Facilities Management",
       description: "Full-service management of residential and commercial properties. Includes cleaning, security coordination, landscaping, waste removal, and minor maintenance.",
-      image: "/Images/facilities management.png",
+      image: "/Images/Facilities Management_NEW.png",
       icon: "🏢"
     },
     {
       title: "Solid & Liquid Waste Management",
       description: "Environmentally responsible collection and disposal services for residential, commercial, and industrial clients. We handle septic tank evacuation, garbage collection, and recycling support.",
-      image: "/Images/solid & liquid waste maagement.png",
+      image: "/Images/Solid & Liquid Waste Management_NEW.png",
       icon: "♻️"
     },
     {
       title: "Landscape Design & Maintenance",
       description: "From turf installation to garden design, our team creates and maintains beautiful, eco-friendly outdoor spaces for homes, institutions, and estates.",
-      image: "/Images/Landscape Design & Maintenance.png",
+      image: "/Images/Landscape Design & Maintenance_NEW.png",
       icon: "🌿"
     }
   ];
@@ -60,7 +60,7 @@ export default function HomePage() {
         </div>
         <div className="w-full">
           <Image
-            src="/Images/hero1.jpg"
+            src="/Images/Hero Image_Newest1.png"
             alt="Cleaning Dynamics team at work"
             width={1920}
             height={800}
@@ -80,7 +80,7 @@ export default function HomePage() {
             {services.map((service, index) => (
               <div key={index} className="group bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
                 {/* Service Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className="relative h-80 overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.title}
@@ -89,7 +89,7 @@ export default function HomePage() {
                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                   />
                   {/* Overlay with icon */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent flex items-end">
                     <div className="p-4">
                       <span className="text-3xl">{service.icon}</span>
                     </div>
