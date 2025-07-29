@@ -23,7 +23,7 @@ export default function HomePage() {
     {
       title: "Facilities Management",
       description: "Full-service management of residential and commercial properties. Includes cleaning, security coordination, landscaping, waste removal, and minor maintenance.",
-      image: "/Images/Facilities Management_NEW.png",
+      image: "/Images/Facilities Management-NEW1.png",
       icon: "🏢"
     },
     {
