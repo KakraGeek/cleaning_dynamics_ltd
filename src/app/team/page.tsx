@@ -2,6 +2,37 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CDL - Our Team",
+  description: "Meet the experienced management team at Cleaning Dynamics Ltd. Our certified professionals drive excellence in cleaning, pest control, and environmental management services across Ghana.",
+  keywords: "cleaning team Ghana, management team cleaning dynamics, professional cleaning staff, certified cleaning professionals, cleaning experts Ghana, experienced cleaning team, cleaning management Ghana, cleaning professionals Accra",
+  openGraph: {
+    title: "CDL - Our Team",
+    description: "Meet the experienced management team at Cleaning Dynamics Ltd. Our certified professionals drive excellence in cleaning, pest control, and environmental management services across Ghana.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Cleaning Dynamics Ltd",
+    images: [
+      {
+        url: "/Images/clean_dyn_logo2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Our Management Team - Cleaning Dynamics Ltd Ghana"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CDL - Our Team",
+    description: "Meet the experienced management team at Cleaning Dynamics Ltd.",
+    images: ["/Images/clean_dyn_logo2.jpg"]
+  },
+  alternates: {
+    canonical: "https://cleaningdynamics.com/team"
+  }
+};
 
 function getMarkdownContent(slug: string) {
   const filePath = path.join(process.cwd(), "src", "data", `${slug}.md`);

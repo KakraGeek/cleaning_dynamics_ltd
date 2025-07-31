@@ -1,4 +1,35 @@
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CDL - Home",
+  description: "Your trusted cleaning and environmental management partner in Ghana since 2000. Premium janitorial, pest control, estate management, and landscaping services across all 16 regions. Call 0244369985 for free quote.",
+  keywords: "cleaning services Ghana, professional cleaning Accra, domestic cleaning Ghana, industrial cleaning services, office cleaning Accra, house cleaning Ghana, commercial cleaning services, janitorial services Ghana, cleaning company Accra, environmental management Ghana",
+  openGraph: {
+    title: "CDL - Home",
+    description: "Your trusted cleaning and environmental management partner in Ghana since 2000. Premium janitorial, pest control, estate management, and landscaping services across all 16 regions.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Cleaning Dynamics Ltd",
+    images: [
+      {
+        url: "/Images/clean_dyn_logo2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Cleaning Dynamics Ltd - Professional Cleaning Services Ghana"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CDL - Home",
+    description: "Your trusted cleaning and environmental management partner in Ghana since 2000.",
+    images: ["/Images/clean_dyn_logo2.jpg"]
+  },
+  alternates: {
+    canonical: "https://cleaningdynamics.com"
+  }
+};
 
 export default function HomePage() {
   const services = [

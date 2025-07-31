@@ -2,6 +2,37 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "CDL - About Us",
+  description: "Learn about Cleaning Dynamics Ltd - Ghana's leading cleaning and environmental services provider. Over 20 years of experience serving homes, offices, and industries across all 16 regions of Ghana.",
+  keywords: "about cleaning dynamics, cleaning company Ghana, environmental services Ghana, professional cleaning team, cleaning business Ghana, trusted cleaning services, cleaning contractor Ghana, cleaning service provider",
+  openGraph: {
+    title: "CDL - About Us",
+    description: "Learn about Cleaning Dynamics Ltd - Ghana's leading cleaning and environmental services provider. Over 20 years of experience serving homes, offices, and industries across all 16 regions of Ghana.",
+    type: "website",
+    locale: "en_US",
+    siteName: "Cleaning Dynamics Ltd",
+    images: [
+      {
+        url: "/Images/clean_dyn_logo2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About Cleaning Dynamics Ltd - Professional Cleaning Services Ghana"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CDL - About Us",
+    description: "Learn about Cleaning Dynamics Ltd - Ghana's leading cleaning and environmental services provider.",
+    images: ["/Images/clean_dyn_logo2.jpg"]
+  },
+  alternates: {
+    canonical: "https://cleaningdynamics.com/about"
+  }
+};
 
 function getMarkdownContent(slug: string) {
   const filePath = path.join(process.cwd(), "src", "data", `${slug}.md`);
